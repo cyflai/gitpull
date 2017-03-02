@@ -12,6 +12,6 @@
       git:
         repo: "{{ ssh_repo }}"
         dest: "{{ dest }}"
-        version: "master"
+        version: "origin/master"
         accept_hostkey: yes
 
