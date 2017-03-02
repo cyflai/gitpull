@@ -13,4 +13,5 @@
         repo: "{{ ssh_repo }}"
         dest: "{{ dest }}"
         version: "master"
+        accept_hostkey: yes
 
