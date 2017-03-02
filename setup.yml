@@ -12,4 +12,5 @@
       git:
         repo: "{{ ssh_repo }}"
         dest: "{{ dest }}"
+        version: "master"
 
