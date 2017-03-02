@@ -7,7 +7,12 @@
     - name: dest
 
   tasks: 
-  
+    - name: copy key
+      copy:     
+        src: files/git_id_rsa.key
+        dest: /tmp/git_id_rsa.key
+        mode: 0600
+      
     - name: Git pull
       git:
         repo: "{{ ssh_repo }}"
@@ -16,3 +21,5 @@
         accept_hostkey: yes
         remote: origin
         force: yes
+        key_file: /tmp/git_id_rsa.key
+        
