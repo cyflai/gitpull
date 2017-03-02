@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  
+  vars:
+    - name: ssh_repo
+    - name: dest
+
+  tasks: 
+  
+    - name: Git pull
+      git:
+        repo: "{{ ssh_repo }}"
+        dest: "{{ dest }}"
+
