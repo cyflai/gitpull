@@ -12,7 +12,12 @@
         src: files/git_id_rsa.key
         dest: /tmp/git_id_rsa.key
         mode: 0600
-      
+        
+    - name: install the latest version of ntpdate
+      package:
+        name:  git
+        state: latest
+    
     - name: Git pull
       git:
         repo: "{{ ssh_repo }}"
